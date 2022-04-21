@@ -1,5 +1,7 @@
 package quota
 
+import model "github.com/jjoc007/poc-api-proxy/domain/model/quota"
+
 type Repository interface {
-	LoadRules()
+	GetLimitCalls(*model.Quota) error
 }
